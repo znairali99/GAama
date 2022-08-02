@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAama Music Web II For Listening Songs</title>
+    <link rel="stylesheet" href="0.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="logo.png" class="logo">
+            <nav>
+                <ul>
+                    <li class="active"><a href="index.html">HOME</a></li>
+                    <li><a href="about.html" target="_blank">ABOUT</a></li>
+                    <li><a href="spi.html" target="_blank">SPECIFICATOINS</a></li>
+                    <li><a href="pro.html" target="_blank">PROJECT</a></li>
+                    <li><a href="con.html" target="_blank">CONNECT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <h1>THE<br>REAL<br>SOUND</h1>
+                <!-- <button type="button">PLAY NOW</button> -->
+            </div>
+            <div class="col-2">
+                <p> <i> Click Here To Listen </i><b>--></b></p>
+                <img src="play.png" id="icon">
+            </div>
+            <div class="made">
+                <h4>Copywrite@2022</h4>
+                <small>Made By Awais</small>
+            </div>
+        </div>
+    </div>
+    <audio id="Mysong">
+        <source src="song1.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        var Mysong =document.getElementById("Mysong");
+        var icon =document.getElementById("icon");
+
+       icon.onclick = function(){
+        if(Mysong.paused){
+            Mysong.play();
+            icon.src = "pause.png";
+        }else{
+            Mysong.pause();
+            icon.src = "play.png";
+        }
+       }
+
+
+</script>
+</body>
+
+</html>
